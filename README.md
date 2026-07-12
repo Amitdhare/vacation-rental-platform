@@ -8,6 +8,7 @@ A full-stack Airbnb Clone web application built using Node.js, Express.js, Mongo
 * Upload Property Images
 * Responsive Design
 * MongoDB Database
+* Review Sysstem
 
 ## Tech Stack
 
