@@ -1,4 +1,4 @@
-# Airbnb Clone
+# Vacation Rental Platform
 
 A full-stack Vacation Rental Platform web application built using Node.js, Express.js, MongoDB, and EJS templating engine with Server-Side Rendering (SSR) architecture.
 
