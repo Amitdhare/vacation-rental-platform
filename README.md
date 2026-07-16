@@ -1,6 +1,6 @@
 # Airbnb Clone
 
-A full-stack Airbnb Clone web application built using Node.js, Express.js, MongoDB, and EJS templating engine with Server-Side Rendering (SSR) architecture.
+A full-stack Vacation Rental Platform web application built using Node.js, Express.js, MongoDB, and EJS templating engine with Server-Side Rendering (SSR) architecture.
 
 ## Features
 
