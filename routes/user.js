@@ -4,56 +4,18 @@ const router = express.Router();
 const User = require("../models/user");
 const passport = require("passport");
 const { saveRedirectUrl } = require("../middleware");
+const userController = require("../controllers/users.js");
 
 
 
-router.get("/signup", (req, res) => {
-    res.render("user/signup.ejs")
-})
+router.get("/signup", userController.signup)
 
-router.post("/signup", wrapAsync(async (req, res) => {
-    try {
-        let { username, email, password } = req.body;
-        const newUser = new User({
-            email, username
-        })
-        
-        const registeredUser = await User.register(newUser, password);
-        console.log(registeredUser)
-        req.login(registeredUser, (err) => {
-            if (err) {
-                return next(err)
-            }
-            req.flash("success", "welcome to wonderlust");
-            res.redirect("/listings");
-        })
+router.post("/signup", wrapAsync(userController.renderSignupform));
 
-    } catch (error) {
-        req.flash("error", error.message);
-        res.redirect("/signup");
-    }
-}));
+router.get("/login", userController.login)
 
-router.get("/login", (req, res) => {
-    res.render("user/login.ejs")
-})
+router.post("/login", saveRedirectUrl ,passport.authenticate("local", { failureRedirect: "/login", failureFlash: true }),userController.renderloginForm )
 
-router.post("/login", saveRedirectUrl ,passport.authenticate("local", { failureRedirect: "/login", failureFlash: true }), async (req, res) => {
-    req.flash("success", "welcome back to wonderlust!")
-     const redirectUrl = res.locals.redirectUrl || "/listings";
-     delete req.session.redirectUrl; // optional but recommended
-    res.redirect(redirectUrl)
-})
-
-router.get("/logout", (req, res, next) => {
-    req.logout((err) => {
-        if (err) {
-            return next(err)
-
-        }
-        req.flash("success", "you are logged out!")
-        res.redirect("/listings")
-    })
-})
+router.get("/logout", userController.logout)
 
 module.exports = router;
