@@ -86,10 +86,11 @@
                             <button class="btn btn-outline-dark ">Submit</button>
                         </form>
                         <% } %>
-
-                            <h4><b>All review</b></h4>
-
+                           
+                        <% if (listing.reviews.length>0) { %>
+                            
                             <div class="row">
+                                <h4><b>All review</b></h4>
                                 <%for( review of listing.reviews) {%>
                                     <div class="card col-5 ms-3 mb-3">
                                         <div class="card-body">
@@ -115,10 +116,17 @@
                                     <% } %>
 
                             </div>
+                            <% } %>
+                             
+                            
+                            
                 </div>
+                 <div class="col-6 offset-3 mb-3">
+                                <h3>where you'll be</h3>
+                                <div id="map"></div>
+                              </div>
 
-
-
-
+        </div>
+       
 
     </body>
