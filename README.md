@@ -4,9 +4,14 @@ A full-stack Vacation Rental Platform web application built using Node.js, Expre
 
 ## Features
 
+## Features
+
 - User Authentication (Sign Up, Login, Logout)
 - Authorization for Listings and Reviews
 - Create, Update, and Delete Property Listings
+- Interactive Map Integration
+- Search Listings by Location
+- Filter Listings by Category
 - Upload Property Images with Cloudinary
 - Review and Rating System
 - Responsive and Mobile-Friendly UI
@@ -17,10 +22,15 @@ A full-stack Vacation Rental Platform web application built using Node.js, Expre
 
 ## Tech Stack
 
-* Frontend: EJS Template  HTML5
-* Backend: Node.js + Express.js
-* Database: MongoDB
-* Styling: CSS / Bootstrap / Tailwind
+## Tech Stack
+
+- Frontend: EJS, HTML5, CSS, Bootstrap
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Image Storage: Cloudinary
+- Maps: Mapbox
+- Validation: Joi
+- Architecture: MVC
 
 ## Author
 
