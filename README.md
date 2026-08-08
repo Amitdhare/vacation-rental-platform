@@ -22,8 +22,6 @@ A full-stack Vacation Rental Platform web application built using Node.js, Expre
 
 ## Tech Stack
 
-## Tech Stack
-
 - Frontend: EJS, HTML5, CSS, Bootstrap
 - Backend: Node.js, Express.js
 - Database: MongoDB
